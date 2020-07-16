@@ -26,7 +26,7 @@ export class NewProductComponent implements OnInit {
     alert("Success");
     this.router.navigate(['/']);
   }
-
+}
 //   ngOnInit() {
 //     this._productService.getProducts()
 //     .subscribe(
@@ -43,5 +43,5 @@ export class NewProductComponent implements OnInit {
   
 //   }
 
- }
+ 
 

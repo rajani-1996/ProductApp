@@ -51,7 +51,7 @@ app.get('/products',verifyToken,function(req,res){
               res.send(products);
           });
 });
-app.get('/insert',verifyToken,function(req,res){
+app.post('/insert',verifyToken,function(req,res){
     res.header("Access-Control-Allow-Origin","*")
     res.header('Access-Control-Allow-Methods: GET,POST,PATCH,PUT,DELETE,OPTIONS')
     console.log(req.body);
@@ -67,7 +67,7 @@ var product ={
     imageUrl : req.body.product.imageUrl
 
 }
-var product = new ProductData(products);
+var product = new ProductData(product);
 product.save();
 });
 
@@ -165,7 +165,7 @@ app.post('/login',(req,res)=>{
                 let payload = {subject:user._id}
                 let token = jwt.sign(payload,'secretKey') 
                 res.status(200).send({token})
-                   // res.status(200).send(user)
+                
                 }
             }
     })
