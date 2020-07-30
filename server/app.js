@@ -118,7 +118,7 @@ var product ={
 }
 console.log("backend server item is " +product._id);
 ProductData.deleteOne(
-    {_id:req.body.productItem._id})
+    {_id:req.body.product._id})
     .then(function(products){
         res.send(products);
     });
